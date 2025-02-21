@@ -19,8 +19,19 @@
 }
 
 #header {
-    height: 10vh;
+    height: 11vh;
     background-color: #C0C0C0;
+    border-radius: 10px;
+    position: fixed;
+    width: 98%;
+    margin:10px;
+    transition: background-color 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+}
+
+#header:hover {
+    height: 13vh;
+    background-color: #68CBF8;
     border-radius: 10px;
     position: fixed;
     width: 98%;
@@ -29,12 +40,37 @@
 }
 
 #content {
-    margin-top: 11vh;
+    margin-top: 13vh;
     margin-left:10px;
 }
 
 #footer {
     width: 100%;
     background-color: black;
+    color: #FFFFFF;
+}
+
+.menu-item{
+    margin-left:20px;
+}
+
+.menu-item:focus{
+    margin-left:20px;
+    margin:10px;
+    background-color: #003152;
+    color: #FFFFFF;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.product-info-list{
+    background-color: #68CBF8;
+}
+
+.product-info-list{
+    background-color: #003152;
+}
+
+.product-info-list:first-child{
     color: #FFFFFF;
 }
