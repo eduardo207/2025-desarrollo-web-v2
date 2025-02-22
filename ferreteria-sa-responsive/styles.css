@@ -1,0 +1,97 @@
+* {
+    font-family: "Roboto Flex", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "wdth" 100,
+      "GRAD" 0,
+      "XOPQ" 96,
+      "XTRA" 468,
+      "YOPQ" 79,
+      "YTAS" 750,
+      "YTDE" -203,
+      "YTFI" 738,
+      "YTLC" 514,
+      "YTUC" 712;
+      margin: 0;
+}
+
+#header {
+    background-color: #C0C0C0;
+    border-radius: 10px;
+    position: fixed;
+    width: 98%;
+    margin:10px;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#header:hover {
+    background-color: #68CBF8;
+    border-radius: 10px;
+    position: fixed;
+    width: 98%;
+    margin:10px;
+    box-shadow: 5px 5px 4px #00000050;
+}
+
+#header div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content {
+    margin-top: 13vh;
+    margin-left:10px;
+}
+
+#footer {
+    width: 100%;
+    background-color: black;
+    color: #FFFFFF;
+}
+
+.menu-item{
+    margin-left:20px;
+}
+
+.menu-item:focus{
+    margin-left:20px;
+    margin:10px;
+    background-color: #003152;
+    color: #FFFFFF;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.product-info-list{
+    background-color: #68CBF8;
+}
+
+.product-info-list{
+    background-color: #003152;
+}
+
+.product-info-list:first-child{
+    color: #FFFFFF;
+}
+
+.product-item{
+    border-radius: 10px;
+    margin-left:10px;
+    border: 1px solid #000000;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product-item:hover{
+    box-shadow: 10px 10px 5px #003152;
+}
+
