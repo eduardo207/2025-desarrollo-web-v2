@@ -90,6 +90,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 15px;
+    margin-right: 15px !important;
 }
 
 .product-item{
@@ -97,10 +98,21 @@
     border: 1px solid #000000;
     transition: box-shadow 0.3s ease-in-out;
     height: 150px;
-    width: 30vw;
+    flex: 0 1 400px;
+    display: flex;
 }
 
 .product-item:hover{
     box-shadow: 5px 5px 5px #003152;
+}
+
+.product-detail{
+    width:49%;
+    padding:10px;
+}
+
+.product-item img{
+    width:49%;
+    border-radius: 10px 0 0 10px;
 }
 
