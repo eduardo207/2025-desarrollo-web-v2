@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 10-04-2025</title>
+</head>
+<body>
+    <h1>Clase de JavaScript</h1>
+
+    <script>
+        // Ejemplo de comentario de linea simple en JavaScript
+        let nombre = "eduardo";
+        /*
+            Ejemplo de un comentario multilinea
+            en JavaScript
+        */
+        console.log("Hola mundo, este es mi primer ejemplo con JS ", nombre);
+
+        // Ejemplo de utilización de VAR en JavaScript (HOISTING)
+        var edad = 16;
+        if(edad < 18){
+            var miVariable = "valor 1";
+            console.log("es menor de edad");
+            console.log(miVariable);
+        }
+        console.log(miVariable);
+
+        // Ejemplo de utilización de LET en JavaScript (SIN HOISTING)
+        var edad2 = 16;
+        if(edad2 < 18){
+            let miVariable2 = "valor 1";
+            console.log("es menor de edad");
+            console.log(miVariable2);
+        }
+        //console.log(miVariable2);
+
+
+        // Validación de tipos de variables
+        let varText1 = "1";
+        let varText2 = "2";
+        let varNumber1 = 1;
+        let varNumber2 = 3;
+
+        console.log(varNumber1 + varNumber2);
+        console.log(varText1 + varText2);
+
+        if(varNumber1 == varNumber2){
+            console.log("variables numericas iguales");
+        }else{
+            console.log("variables tipo Numerico diferentes");
+        }
+
+        if(varText1 == varText2){
+            console.log("variables tipo Texto iguales");
+        }else{
+            console.log("variables tipo Texto diferentes");
+        }
+
+        if(varNumber1 === varText1){
+            console.log("variables iguales");
+        }else{
+            console.log("variables diferentes");
+        }
+
+        //Ejemplo de la función de sumatorio de dos números
+        function sumarDosNumeros(var1, var2){
+            let resultado = var1 + var2;
+            return resultado;
+        }
+
+        let resultado = sumarDosNumeros(100,32);
+        console.log(resultado);
+
+    </script>
+</body>
+</html>
