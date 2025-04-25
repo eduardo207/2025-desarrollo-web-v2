@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenedor">
+        div contenedor
+    </div>
+
+    <button onclick="funcionDePrueba()">CLIC AQUI</button>
+    <br />
+
+    <button onclick="funcionEjercicioClase()">CLIC AQUI PARA VER H1 A H5</button>
+    <br />
+    <div id="ejercicioClase"></div>
+
+    <!-- Cambiar el contenido de un parrafo -->
+    <br />
+    <br />
+    <p id="parrafo">Este es el texto original.</p>
+    <button onclick="funcionCambioDeTexto()">CLIC AQUI</button>
+
+    <!-- Cambiar el color de fondo con un boton -->
+    <br />
+    <br />
+    <div id="ejercicioColorFondo" style="width:500px; height:100px; background-color:blue;"> </div>
+    <button onclick="funcionCambioDeColor()">CAMBIAR COLOR DE FONDO</button>
+
+    <!-- Agregar elementos dinamicos a una lista -->
+    <br />
+    <br />
+    <ul id="lista"></ul>
+    <input type="text" id="inputTexto" placeholder="Escribe algo...">
+    <button onclick="funcionElementosLista()">Agregar elemento a la lista</button>
+    <button onclick="borrarElementosLista()">Borrar elemento lista</button>
+
+    <script>
+        function funcionDePrueba(prueba, prueba2) {
+            let contenedor = document.getElementById("contenedor");
+            let h1 = document.createElement("h1");
+            h1.innerHTML = "Esto es un titulo en H1";
+            contenedor.appendChild(h1);
+        }
+
+        // function funcionEjercicioClase ()
+        const funcionEjercicioClase = () => {
+            let divContenedor = document.getElementById('ejercicioClase');
+            for (let i=1; i<6; i++){
+                let hTitulo = document.createElement('h' + i);
+                hTitulo.innerHTML = "contador " + i;
+                divContenedor.appendChild(hTitulo);
+            }
+        }
+
+        // Cambiar el contenido de un parrafo
+        function funcionCambioDeTexto(){
+            let parrafo =  document.getElementById("parrafo");
+            parrafo.innerHTML = "Este es el texto cambiado.";
+        }
+
+        // Cambiar el color de fondo con un boton
+        function funcionCambioDeColor(){
+            let divEjercicioColorFondo = document.getElementById("ejercicioColorFondo");
+            divEjercicioColorFondo.style.backgroundColor = "red";
+        }
+
+        // Agregar elementos dinamicos a una lista
+        const funcionElementosLista = () => {
+            let lista = document.getElementById('lista');
+            let textoInput = document.getElementById('inputTexto').value;
+            let li = document.createElement('li');
+            li.innerHTML = textoInput;
+            lista.appendChild(li);
+        }
+
+        const borrarElementosLista = () => {
+            let lista = document.getElementById('lista');
+            let li = lista.firstChild;
+            if (li) {
+                lista.removeChild(li);
+            } else {
+                alert("No hay elementos para borrar");
+            }
+        }
+
+    </script>
+</body>
+</html>
