@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="forma" style="width:400px; height:400px; background-color:blue;"></div>
+    <button onclick="cambioForma()">CAMBIAR FORMA</button>
+    <script>
+        const cambioForma = () => {
+            let divForma = document.getElementById('forma');
+            divForma.style.width = '400px';
+            divForma.style.height = '400px';
+            divForma.style.backgroundColor = 'red';
+            //divForma.style.borderRadius = '50%';
+            for(let i=0; i<600; i++){
+                //divForma.style.transform = 'rotate(' + (i * 36) + 'deg)';
+                divForma.style.marginLeft = (i * 2) + 'px';
+                divForma.style.transition = 'all 2s';
+            }
+        }
+    </script>
+</body>
+</html>
